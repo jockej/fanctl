@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:fanctl-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -47,12 +46,6 @@ $EndDescr
 Wire Wire Line
 	2050 5750 2050 5950
 Connection ~ 1150 5350
-Wire Wire Line
-	1150 5750 1150 5350
-Wire Wire Line
-	600  5200 600  5350
-Wire Wire Line
-	600  5350 1700 5350
 Connection ~ 1400 5950
 Wire Wire Line
 	1400 5950 1400 5750
@@ -61,15 +54,11 @@ Wire Wire Line
 	1600 6600 1150 6600
 Wire Wire Line
 	2050 5950 1150 5950
-Wire Wire Line
-	950  3950 900  3950
 Connection ~ 800  4050
-Wire Wire Line
-	900  3950 900  4200
 Wire Wire Line
 	800  4200 800  4050
 Wire Wire Line
-	800  4050 900  4050
+	800  4050 1150 4050
 Connection ~ 900  4050
 Wire Wire Line
 	2000 1450 1800 1450
@@ -346,14 +335,14 @@ Wire Wire Line
 Wire Wire Line
 	4700 5100 2050 5100
 Wire Wire Line
-	2900 7300 1150 7300
+	1150 7300 3200 7300
 Wire Wire Line
 	1150 7300 1150 6050
 Wire Wire Line
 	1600 5950 1600 6200
 Connection ~ 1600 5950
 Wire Wire Line
-	1150 5850 1700 5850
+	1150 5850 2250 5850
 Wire Wire Line
 	1700 5850 1700 5750
 Wire Wire Line
@@ -361,17 +350,6 @@ Wire Wire Line
 Connection ~ 750  5350
 Wire Wire Line
 	2050 5100 2050 5450
-$Comp
-L GND-RESCUE-fanctl #PWR?
-U 1 1 566DB645
-P 600 5200
-F 0 "#PWR?" H 600 5200 30  0001 C CNN
-F 1 "GND" H 600 5130 30  0001 C CNN
-F 2 "" H 600 5200 60  0001 C CNN
-F 3 "" H 600 5200 60  0001 C CNN
-	1    600  5200
-	-1   0    0    1   
-$EndComp
 $Comp
 L ZENER-RESCUE-fanctl D?
 U 1 1 566DB56B
@@ -404,17 +382,6 @@ F 2 "" H 850 4400 60  0001 C CNN
 F 3 "" H 850 4400 60  0001 C CNN
 	1    850  4400
 	0    1    1    0   
-$EndComp
-$Comp
-L GND-RESCUE-fanctl #PWR?
-U 1 1 566B2BF8
-P 900 3950
-F 0 "#PWR?" H 900 3700 50  0001 C CNN
-F 1 "GND" H 900 3800 50  0000 C CNN
-F 2 "" H 900 3950 60  0001 C CNN
-F 3 "" H 900 3950 60  0001 C CNN
-	1    900  3950
-	0    -1   -1   0   
 $EndComp
 $Comp
 L Q_PMOS_SDG Q0
@@ -980,4 +947,59 @@ F 3 "" H 3350 2100 50  0000 C CNN
 	1    3350 2100
 	1    0    0    -1  
 $EndComp
+Connection ~ 2900 7300
+$Comp
+L C C0
+U 1 1 5675FD6B
+P 2100 7050
+F 0 "C0" H 2125 7150 50  0000 L CNN
+F 1 "0.1uF" H 2125 6950 50  0000 L CNN
+F 2 "" H 2138 6900 50  0000 C CNN
+F 3 "" H 2100 7050 50  0000 C CNN
+	1    2100 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 7200 2100 7300
+Connection ~ 2100 7300
+$Comp
+L GND #PWR?
+U 1 1 5675FEE2
+P 2100 6800
+F 0 "#PWR?" H 2100 6550 50  0001 C CNN
+F 1 "GND" H 2100 6650 50  0000 C CNN
+F 2 "" H 2100 6800 50  0000 C CNN
+F 3 "" H 2100 6800 50  0000 C CNN
+	1    2100 6800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2100 6800 2100 6900
+Wire Wire Line
+	900  4050 900  4200
+Wire Wire Line
+	1150 4050 1150 5350
+Wire Wire Line
+	750  5350 1700 5350
+NoConn ~ 1150 5750
+Wire Wire Line
+	2250 5150 4600 5150
+Wire Wire Line
+	4600 5150 4600 5400
+Connection ~ 1700 5850
+$Comp
+L R R?
+U 1 1 56769747
+P 2250 5600
+F 0 "R?" V 2330 5600 50  0000 C CNN
+F 1 "R" V 2250 5600 50  0000 C CNN
+F 2 "" V 2180 5600 50  0000 C CNN
+F 3 "" H 2250 5600 50  0000 C CNN
+	1    2250 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 5450 2250 5150
+Wire Wire Line
+	2250 5850 2250 5750
 $EndSCHEMATC
