@@ -1,4 +1,4 @@
-update=Wed 23 Dec 2015 03:23:15 PM CET
+update=Wed 23 Dec 2015 10:02:20 PM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -28,7 +28,7 @@ LastNetListRead=
 LibDir=
 [eeschema]
 version=1
-LibDir=/home/joakimj/kicad_libs/bfrigon/library;/home/joakimj/kicad_libs/ab2/library;../hw
+LibDir=../hw;../../../kicad_libs/ab2tech/library
 [eeschema/libraries]
 LibName1=fanctl-rescue
 LibName2=power
@@ -62,3 +62,4 @@ LibName29=contrib
 LibName30=valves
 LibName31=ab2_header
 LibName32=fanctl
+LibName33=/home/joakim/kicad_libs/ab2tech/library/ab2_header
