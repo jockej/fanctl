@@ -1,4 +1,4 @@
-update=Fri 25 Dec 2015 12:53:57 AM CET
+update=Mon 28 Dec 2015 10:57:43 AM CET
 version=1
 last_client=kicad
 [cvpcb]
@@ -28,7 +28,7 @@ LastNetListRead=
 LibDir=
 [eeschema]
 version=1
-LibDir=../hw;../../../kicad_libs/ab2tech/library
+LibDir=../hw;/home/joakimj/kicad_libs/ab2/library
 [eeschema/libraries]
 LibName1=fanctl-rescue
 LibName2=power
